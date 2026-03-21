@@ -1,11 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
+import HomePage from './pages/HomePage'
+
 function App() {
   return (
-    <div className="min-h-screen bg-bg-primary flex items-center justify-center">
-      <h1 className="text-text-primary text-2xl font-mono">
-        typing<span className="text-accent-primary">test</span>
-      </h1>
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-bg-primary flex flex-col">
+        <Header />
+        <main className="flex-1 flex flex-col items-center justify-center px-6 py-8">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
-export default App;
+export default App
