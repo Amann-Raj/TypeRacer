@@ -10,4 +10,4 @@ const Loader = ({ text = 'loading...' }) => {
     )
 }
 
-export default Loaders
+export default Loader
